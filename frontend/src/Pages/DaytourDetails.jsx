@@ -1,0 +1,157 @@
+
+import React, {useRef,useState} from 'react'
+import '../Styles/tourDetails.css'
+import Booking from '../Components/Booking/Booking'
+
+import {Container, Row,Col, Button, Form, ListGroup} from 'react-bootstrap'
+import { useParams } from 'react-router-dom'
+import daytours from '../assets/data/daytours'
+
+import calculateAvgRating from '../Utils/avgRating'
+import avatr from '../assets/images/avatar.jpg'
+
+const DaytourDetails = () => {
+  
+    const {id}=useParams();
+
+    //get review
+    const reviewMsgRef=useRef("");
+    const [tourRating, setTourRating]=useState(null);
+  
+    const tour=daytours.find(tour=>tour.id===id);
+   
+  
+    //Data
+    const{photo, title, desc,price,address,reviews,City,distance,maxGroupSize}=tour;
+    
+  
+  
+    const{totalRating,avgRating}=calculateAvgRating(reviews);
+  
+    //Date format
+    const options = {day:'numeric', month:'long', year:'numeric'};
+  
+    //submit request 
+    const submited = (event) => {
+      event.preventDefault();
+      const reviewtext=reviewMsgRef.current.value;
+      // Submit form data to server or API
+    }
+  
+   
+  
+    return (
+      <section> {/*---- Tour info section ----*/}
+        <Container>
+          <Row>
+            <Col lg='8'>
+              <div className="tour_content">
+                <img src={photo} alt="" />
+  
+                <div className="tour_info">
+                  <h2>{title}</h2>
+  
+                  <div className="d-flex align-items-center gap-5">
+                  <span className='tour_lrating d-flex align-items-center gap-1'>
+                  <i class="fa-solid fa-star" style={{'color':"var(--secondary-color)"}}></i>{avgRating===0? null : avgRating}
+                  {totalRating===0?("Not rated"):(<span>({reviews.length})</span>
+                  
+                  )}
+                  </span>
+  
+                  <span>
+                  <i class="fa-sharp fa-solid fa-location-dot" style={{'color':"var(--secondary-color)"}}></i>{address}
+                  </span>
+  
+                  </div>
+                  
+                  <div className="tourextra-details">
+                    <span>
+                    <i class="fa-solid fa-map-pin"></i>{City}
+                    </span>
+                    <span>
+                    <i class="fa-solid fa-dollar-sign"></i>${price} /per Kilometer
+                    </span>
+                    
+                    <span>
+                    <i class="fa-solid fa-user-group"></i>{maxGroupSize} People
+                    </span>
+                  </div>
+  
+                  <h5>Description</h5>
+                  <p>{desc}</p>
+  
+                </div>
+                {/*---- Reviews Sections ----*/}
+  
+                  <div className="tour_reviews mt-4">
+                    <h4>Reviews ({reviews?.length} reviews)</h4>
+  
+                    <Form onSubmit={submited}>
+                      <div className="d-flex align-items-center gap-4 mb-4 rating_group">
+                          <span className='gap-2' onClick={()=>setTourRating(1)}>
+                            1<i class="fa-solid fa-star"></i>
+                            </span>
+                          <span className='gap-2' onClick={()=>setTourRating(2)}>
+                            2<i class="fa-solid fa-star"></i>
+                            </span>
+                          <span className='gap-2' onClick={()=>setTourRating(3)}>
+                            3<i class="fa-solid fa-star"></i>
+                            
+                            </span>
+                          <span className='gap-2' onClick={()=>setTourRating(4)}>
+                            4<i class="fa-solid fa-star"></i>
+                            </span>
+                          <span className='gap-2' onClick={()=>setTourRating(5)}>
+                            5<i class="fa-solid fa-star"></i>
+                            </span>
+  
+                      </div>
+                      <div className="review_input">
+                        <input type="text" ref={reviewMsgRef} placeholder='Share your thoughts' required/>
+                        <button type='submit' className='btn primary__btn text-white'>Submit</button>
+                      </div>
+                    </Form>
+  
+                    <ListGroup className='user_reviews'>
+                      {reviews?.map(review=>(
+                        <div className='review_item'>
+                          <img src={avatr} alt="" />
+                          <div className="w-100">
+                            <div className="d-flex align-items-center justify-content-between">
+                              <div>
+                                <h5>Gihan</h5>
+                                <p>{new Date('01-18-2023').toLocaleDateString("en-US",options)}</p>
+                              </div>
+  
+                              <span className="d-flex align-items-center">
+                              <span className='gap-2'>5<i class="fa-solid fa-star"></i></span>
+                              </span>
+  
+  
+                            </div>
+                            <h6>Amerzing Tour</h6>
+                          </div>
+                        </div>
+                      ))}
+                    </ListGroup>
+                  </div>
+  
+              </div>
+            </Col>
+            {/*--- Booking Form ---*/}
+            <Col lg='4'>
+                <Booking tour={tour} avgRating={avgRating}/>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+  
+      
+  
+  
+  
+  )
+}
+
+export default DaytourDetails

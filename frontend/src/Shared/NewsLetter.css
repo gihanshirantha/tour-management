@@ -1,0 +1,50 @@
+.newsLetter{
+    background: #DCF8C6;
+    padding: 0;
+    margin-top: 3rem;
+}
+
+.newsLetter_img{
+    width: 100%;
+}
+
+.newsLetter_content{
+    padding: 50px 0;
+}
+
+.newsLetter_content h2{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.newsLetter_input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.newsLetter_input input{
+    border: none;
+    font-size: 1rem;
+    color: var(--heading-color);
+}
+
+.newsLetter_input input:focus{
+    outline: none;
+}
+
+.newsLetter_btn{
+    padding: 0.5rem 1.5rem, im !important;
+    background: var(--secondary-color);
+    color: #fff;
+    font-size: 1.1rem, im !important;
+}
+
+.newsLetter_content p{
+    color: var(--text-color);
+    font-size: 1.1rem;
+}

@@ -1,0 +1,31 @@
+.common_sections{height: 30vh;
+    width: 100%;
+    
+    background-color: #eee;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50px 0 50px 0;
+    
+    animation: image 8s infinite alternate;
+  }
+  
+  @keyframes image {
+    0% {
+      background-image: url('../assets/images/commonbackground01.jpg');
+    }
+    30% {
+      background-image: url('../assets/images/commonbackground02.jpg');
+    }
+    60% {
+      background-image: url('../assets/images/commonbackground03.jpg');
+    }
+    100% {
+      background-image: url('../assets/images/commonbackground04.jpg');
+    }
+  }
+.common_sections h1{
+    font-size: 4.5rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 60px;
+}

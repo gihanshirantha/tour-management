@@ -1,0 +1,59 @@
+.headr{
+    width: 100%;
+}
+
+
+.logo{
+    width: 40%;
+}
+
+.nav_items{
+    font-weight: 500;
+    color: var(--heading-color);
+}
+
+.mobile_menu{
+    font-style: 1.3rem;
+    color: var(--heading-color);
+    display: none;
+}
+.nav_items a.active_link{
+    color: var(--secondary-color);
+}
+.reg_btn{
+ background:var(--secondary-color) ;
+ border: none;
+}
+
+.login_btn{
+    background: none;
+    color: black;
+    border: none;
+}
+
+.sticky_header{
+    width: 100%;
+    height: 87px;
+    line-height: 80px;
+    background: #ffff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 8px -3px #ddd;
+    z-index: 999;
+    
+
+}
+
+.reg_btn:hover{
+    border: none;
+    background: var(--heading-color) !important;
+    color: #fff !important;
+}
+
+.login_btn:hover{
+    border: none;
+    background:var(--heading-color) !important;
+    font-weight: 500 !important;
+}
+
