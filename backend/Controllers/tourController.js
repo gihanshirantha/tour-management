@@ -1,5 +1,6 @@
 import { query } from "express";
 import Tour from "../models/Tour.js";
+import { sendNotFoundResponse } from "../reponses/notFoundResponse.js";
 
 //create new tour
 
@@ -72,6 +73,8 @@ export const getSingleTour = async (req, res) => {
   try {
     const tour = await Tour.findById(id).populate("reviews");
 
+    if (!tour) sendNotFoundResponse(res, "tour");
+
     res.status(200).json({
       success: true,
       message: "detected",
@@ -95,6 +98,9 @@ export const getAllTour = async (req, res) => {
       .populate("reviews")
       .skip(page * 8)
       .limit(8);
+
+      if (!tours) sendNotFoundResponse(res, "tours");
+
     res.status(200).json({
       success: true,
       count: tours.length,
@@ -121,6 +127,9 @@ export const getTourBySearch = async (req, res) => {
       days: { $gte: days },
       maxGroupSize: { $gte: maxGroupSize },
     }).populate("reviews");
+
+    if (!tours) sendNotFoundResponse(res, "tour");
+
     res.status(200).json({
       success: true,
       message: "successful",
@@ -139,6 +148,9 @@ export const getTourBySearch = async (req, res) => {
 export const getFeaturedTour = async (req, res) => {
   try {
     const tours = await Tour.find({ featured: true }).populate("reviews");
+
+    if (!tours) sendNotFoundResponse(res, "Featured tours");
+
     res.status(200).json({
       success: true,
       message: "successful",
