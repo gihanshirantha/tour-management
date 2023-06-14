@@ -31,7 +31,8 @@ const handleClick= async e=>{
   try {
 
     const res = await fetch(`${BASE_URL}/auth/register`,{
-      method:'post',
+      method:'POST',
+      mode:'cors',
       headers:{
         'content-type':'application/json'
       },
