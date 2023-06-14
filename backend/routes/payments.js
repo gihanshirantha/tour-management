@@ -1,10 +1,9 @@
-import express  from "express";
+import express from "express";
 import { createPayment } from "../Controllers/paymentController.js";
 import { verifyUser } from "../Utils/verifyToken.js";
 
-const router =express.Router();
+const router = express.Router();
 
-router.post('/:bookingId',verifyUser ,createPayment)
+router.post("/:bookingId", verifyUser, createPayment);
 
-
-export default router
+export default router;

@@ -10,27 +10,25 @@ const vehicleSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    vehicleCategory:{
+    vehicleCategory: {
       type: String,
       required: true,
     },
     photo: {
       type: String,
-      
     },
     driverName: {
       type: String,
       required: true,
     },
     driverContactNo: {
-        type: Number,
-        required: true,
+      type: Number,
+      required: true,
     },
     noOfPassengers: {
-        type: Number,
-        required: true,
-      },
-
+      type: Number,
+      required: true,
+    },
   },
   { timestamps: true }
 );
