@@ -20,8 +20,7 @@ dotenv.config();
 const app=express();
 const port = process.env.PORT||8000;
 const corsOption={
-    origin:true,
-    Credentials:true,
+    origin:"*",
 }
 
 //database connection
@@ -49,7 +48,7 @@ app.get("/",(req,res)=>{
 app.use(express.json());
 app.use(cors(corsOption));
 app.use(cookieParser());
-  
+
 app.use('/api/v1/auth', authRoute);
 app.use('/api/v1/tours', tourRoute);
 app.use('/api/v1/users', userRoute); 
@@ -59,6 +58,10 @@ app.use('/api/v1/payment',paymentRoute);
 app.use('/api/v1/vehicle',vehicleRoute);
 
 
+app.use((error, req, res, next) => {
+    console.error(error);
+    res.json({error});
+})
 
 
 
