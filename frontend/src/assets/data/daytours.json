@@ -2,60 +2,60 @@
     {
         "title": "Galle Day Tour",
         "city": "Galle",
-        "address": "Somewhere in London",
+       
     
         "price": 200,
         "maxGroupSize": 15,
         "desc": "this is the description",
         "reviews": [],
     
-        "photo": "/tour-images/dayt01.jpg"
+        "photo": "tour-imag"
         
       },
       {
         "title": "Kithulgala Day Tour",
         "city": "Kithulgala",
-        "address": "Somewhere in London",
+      
     
         "price": 200,
         "maxGroupSize": 15,
         "desc": "this is the description",
         "reviews": [],
     
-        "photo": "/tour-images/dayt02.jpg"
+        "photo": "tour-images"
         
       },
           {
         "title": "Kithulgala Day Tour",
         "city": "Kithulgala",
-        "address": "Somewhere in London",
+        
     
         "price": 200,
         "maxGroupSize": 15,
         "desc": "this is the description",
         "reviews": [],
     
-        "photo": "/tour-images/dayt03.jpg"
+        "photo": "tour-images"
         
       },
 
       {
         "title": "Sigiriya Day Tour",
         "city": "Sigiriya",
-        "address": "Somewhere in London",
+        
     
         "price": 200,
         "maxGroupSize": 15,
         "desc": "this is the description",
         "reviews": [],
     
-        "photo": "/tour-images/dayt04.jpg"
+        "photo": "tour-images"
         
       },
       {
         "title": "Colombo Day Tour",
         "city": "Colombo",
-        "address": "Somewhere in London",
+        
     
         "price": 200,
         "maxGroupSize": 15,
@@ -69,7 +69,7 @@
       {
         "title": "Kandy Day Tour",
         "city": "Kandy",
-        "address": "Somewhere in London",
+     
     
         "price": 200,
         "maxGroupSize": 15,
