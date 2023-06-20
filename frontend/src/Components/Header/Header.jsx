@@ -31,7 +31,7 @@ function Header() {
   const navigate=useNavigate()
   const {user,dispatch}=useContext(AuthContext)
 
-  const logot=()=>{
+  const logout=()=>{
     dispatch({type:'LOGOUT'})
     navigate('/')
   }

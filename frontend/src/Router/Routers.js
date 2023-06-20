@@ -11,12 +11,16 @@ import Register from './../Pages/Register';
 import Destinations from './../Pages/Destinations';
 import ThankYou from '../Pages/ThankYou';
 import About from '../Pages/About';
+import AdminLogin from '../Admin/AdminLogin';
 
 
 function Routers() {
   return (
     <Routes>
         <Route path='/' element={<Navigate to='/home'/>}/>
+
+        
+
         <Route path='/home' element={<Home/>}/>
         <Route path='/tour' element={<Tours/>}/>
         <Route path='/tours/:id' element={<TourDetails/>}/>

@@ -53,12 +53,12 @@ console.log(tour);
         reviewText,
         rating:tourRating
       }
-    const res=await fetch(`${BASE_URL}/review/${id}`,{
-      method:'POST',
-      mode:'cors',
-      headers:{
-        'content-type':'application/json'
-      },
+      const res = await fetch(`${BASE_URL}/review/${id}`,{
+        method:'POST',
+        mode:'cors',
+        headers:{
+          'content-type':'application/json'
+        },
       credentials:'include',
       body:JSON.stringify(reviewObj)
     })
