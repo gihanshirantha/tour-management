@@ -9,10 +9,10 @@ import userIcon from '../assets/images/user.png'
 import {BASE_URL} from '../Utils/config'
 import {AuthContext} from '../context/AuthContext'
 
-function Login() {
+const Login = ()=> {
   const [credentials, setCredentials]=useState({
     email:undefined,
-    password:undefined
+    password:undefined,
 
 });
 
@@ -20,31 +20,33 @@ const {dispatch}=useContext(AuthContext);
 const navigate = useNavigate()
 
   const handleChange = e =>{
-    setCredentials(Prev=>({...Prev,[e.target.id]:e.target.value}))
+    setCredentials(prev=>({...prev,[e.target.id]:e.target.value}))
 };
 const handleClick=async e=>{
   e.preventDefault();
-  dispatch({type:"LOGIN_START"})
+  dispatch({type:'LOGIN_START'});
+  console.log(credentials);
 
   try {
     const res=await fetch(`${BASE_URL}/auth/login`,{
       method:'post',
+      mode:'cors',
       headers:{
         'content-type':'application/json'
       },
       credentials:'include',
-      body:JSON.stringify(credentials)
+      body:JSON.stringify(credentials),
     })
 
     const result=await res.json()
-    if(!res.ok)alert(result.essage)
+    if(!res.ok)alert(result.message)
     console.log(result.data)
 
-    dispatch({type:"LOGIN_SUCCESS",payload:result.data});
+    dispatch({type:'LOGIN_SUCCESS',payload:result.data});
     navigate("/");
     
   } catch (err) {
-    //dispatch({type:"LOGIN_FAILURE",payload:result.data});
+    dispatch({type:'LOGIN_FAILURE',payload:err.message});
   }
 
 
@@ -67,8 +69,7 @@ const handleClick=async e=>{
                   <h2>Login</h2>
                   <Form className='mb-2'onSubmit={handleClick} >
                     <FormGroup className='mb-2'>
-                      <input t
-                      ype="email" 
+                      <input type="email" 
                       placeholder='Email' 
                       required 
                       id='email' 

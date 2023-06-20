@@ -11,6 +11,7 @@ import reviewRoute from "./routes/reveiws.js";
 import bookingRoute from "./routes/bookings.js";
 import paymentRoute from "./routes/payments.js";
 import vehicleRoute from "./routes/vehicles.js";
+import daytourRout from "./routes/daytours.js"
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 const corsOption = {
   origin: "*",
+ 
 };
 
 //database connection
@@ -51,6 +53,8 @@ app.use("/api/v1/review", reviewRoute);
 app.use("/api/v1/booking", bookingRoute);
 app.use("/api/v1/payment", paymentRoute);
 app.use("/api/v1/vehicle", vehicleRoute);
+app.use("/api/v1/daytours", daytourRout);
+
 
 app.use((error, req, res, next) => {
   console.error(error);

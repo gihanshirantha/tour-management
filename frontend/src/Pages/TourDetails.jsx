@@ -1,4 +1,4 @@
-import React,{useRef,useState} from 'react'
+import React,{useRef,useState,useContext} from 'react'
 import '../Styles/tourDetails.css'
 import Booking from '../Components/Booking/Booking'
 
@@ -10,6 +10,7 @@ import calculateAvgRating from '../Utils/avgRating'
 import avatr from '../assets/images/avatar.jpg'
 import useFetch from '../hooks/useFetch'
 import {BASE_URL} from '../Utils/config'
+import { AuthContext } from '../context/AuthContext'
 
 
 const TourDetails=( )=> {
@@ -21,7 +22,7 @@ console.log(tour);
   //get review
   const reviewMsgRef=useRef("");
   const [tourRating, setTourRating]=useState(null);
-
+  const {user}= useContext(AuthContext);
 // fetch data from database
 
 
@@ -38,9 +39,40 @@ console.log(tour);
   const options = {day:'numeric', month:'long', year:'numeric'};
 
   //submit request 
-  const submited = (event) => {
+  const submited = async (event) => {
     event.preventDefault();
-    const reviewtext=reviewMsgRef.current.value;
+    const reviewText=reviewMsgRef.current.value;
+
+
+    try {
+      if(!user || user===undefined || user===null){
+        alert('Please Sign in')
+      }else{
+      const reviewObj={
+        username:user?.username,
+        reviewText,
+        rating:tourRating
+      }
+    const res=await fetch(`${BASE_URL}/review/${id}`,{
+      method:'POST',
+      mode:'cors',
+      headers:{
+        'content-type':'application/json'
+      },
+      credentials:'include',
+      body:JSON.stringify(reviewObj)
+    })
+
+    const result=await res.json()
+    if(!res.ok)alert(result.message)
+    alert("Review Submited")
+  }
+      
+    } catch (err) {
+       alert(err.message);
+    }
+    
+
     // Submit form data to server or API
   }
 
@@ -137,17 +169,17 @@ console.log(tour);
                         <div className="w-100">
                           <div className="d-flex align-items-center justify-content-between">
                             <div>
-                              <h5>Gihan</h5>
-                              <p>{new Date('01-18-2023').toLocaleDateString("en-US",options)}</p>
+                              <h5>{review.username}</h5>
+                              <p>{new Date(review.createdAt).toLocaleDateString("en-US",options)}</p>
                             </div>
 
                             <span className="d-flex align-items-center">
-                            <span className='gap-2'>5<i class="fa-solid fa-star"></i></span>
+                            <span className='gap-2'>{review.rating}<i class="fa-solid fa-star"></i></span>
                             </span>
 
 
                           </div>
-                          <h6>Amerzing Tour</h6>
+                          <h6>{review.reviewText}</h6>
                         </div>
                       </div>
                     ))}

@@ -17,13 +17,14 @@ import { BASE_URL } from '../Utils/config'
 
 
 
-import daytours from '../assets/data/daytours'
 function Tours() {
 
 const[pageCount,setPageCount]=useState(0);
 const[page,setPage]=useState(0);
 
 const {data:tours, loading, error}=useFetch(`${BASE_URL}/tours?page=${page}`);
+const {data:daytours, load, err}=useFetch(`${BASE_URL}/daytours`);
+
 const {data:tourCount}=useFetch(`${BASE_URL}/tours/search/getTourCount`);
 
 
@@ -63,6 +64,16 @@ useEffect(()=>{
 of time or travelers who prefer to do excursions. We have amazing one day tour programmes for
 you. Please check it and let us know how you feel about it.</p>
           </Row>
+          {
+              load && <h4 className='text-centert pt-5'>Loading.......</h4>
+            }
+            {
+              err && <h4 className='text-centert pt-5'>{error}</h4>
+
+            }
+
+          {
+            !loading && !error && 
           <Row>
             {
               daytours?.map(daytour=>(
@@ -72,7 +83,7 @@ you. Please check it and let us know how you feel about it.</p>
                 </Col>
               ))
             }
-          </Row>
+          </Row>}
           </Container>
       </section>
       

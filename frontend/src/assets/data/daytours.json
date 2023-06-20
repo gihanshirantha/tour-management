@@ -2,39 +2,23 @@
     {
         "title": "Galle Day Tour",
         "city": "Galle",
-       
-    
+       "distance":"150",
         "price": 200,
         "maxGroupSize": 15,
         "desc": "this is the description",
         "reviews": [],
-    
         "photo": "tour-imag"
         
       },
-      {
-        "title": "Kithulgala Day Tour",
-        "city": "Kithulgala",
-      
-    
-        "price": 200,
-        "maxGroupSize": 15,
-        "desc": "this is the description",
-        "reviews": [],
-    
-        "photo": "tour-images"
-        
-      },
+
           {
         "title": "Kithulgala Day Tour",
         "city": "Kithulgala",
-        
-    
+        "distance":"68",
         "price": 200,
         "maxGroupSize": 15,
         "desc": "this is the description",
         "reviews": [],
-    
         "photo": "tour-images"
         
       },
@@ -42,26 +26,22 @@
       {
         "title": "Sigiriya Day Tour",
         "city": "Sigiriya",
-        
-    
+        "distance":"146",
         "price": 200,
         "maxGroupSize": 15,
         "desc": "this is the description",
         "reviews": [],
-    
         "photo": "tour-images"
         
       },
       {
         "title": "Colombo Day Tour",
         "city": "Colombo",
-        
-    
+        "distance":"50",
         "price": 200,
         "maxGroupSize": 15,
         "desc": "this is the description",
         "reviews": [],
-    
         "photo": "/tour-images/dayt05.jpg"
         
       },
@@ -69,13 +49,11 @@
       {
         "title": "Kandy Day Tour",
         "city": "Kandy",
-     
-    
+        "distance":"96",
         "price": 200,
         "maxGroupSize": 15,
         "desc": "this is the description",
         "reviews": [],
-    
         "photo": "/tour-images/dayt06.jpg"
         
       }
