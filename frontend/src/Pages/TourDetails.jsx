@@ -2,10 +2,8 @@ import React,{useRef,useState,useContext} from 'react'
 import '../Styles/tourDetails.css'
 import Booking from '../Components/Booking/Booking'
 
-import {Container, Row,Col, Button, Form, ListGroup} from 'react-bootstrap'
+import {Container, Row,Col,Form, ListGroup} from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
-import tourData from '../assets/data/tours'
-
 import calculateAvgRating from '../Utils/avgRating'
 import avatr from '../assets/images/avatar.jpg'
 import useFetch from '../hooks/useFetch'
@@ -49,12 +47,13 @@ console.log(tour);
         alert('Please Sign in')
       }else{
       const reviewObj={
-        username:user?.username,
+        username:user?.fullname,
         reviewText,
         rating:tourRating
       }
+       
       const res = await fetch(`${BASE_URL}/review/${id}`,{
-        method:'POST',
+        method:'POST ',
         mode:'cors',
         headers:{
           'content-type':'application/json'

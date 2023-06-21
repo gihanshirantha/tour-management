@@ -58,12 +58,12 @@ useEffect(()=>{
   return (
     <header className='header' ref={headerRef}>
     <Container>
-      <Navbar  className='menu d-flex align-items-center gap-5 '>
+      <Navbar  className=' d-flex align-items-center gap-5 '>
     
       <Navbar.Brand>
         <img src={Logo} alt="" className='logo' />
       </Navbar.Brand>
-          <Nav className="me-auto nav_items gap-4 mt-2">
+          <Nav className="menu me-auto nav_items gap-4 mt-2">
             {nav_link.map((item,index)=>(<NavLink key={index} to={item.path} 
            className={navClass=>navClass.isActive?"active_link":""} >{item.display}</NavLink>))}
           </Nav>
@@ -74,7 +74,7 @@ useEffect(()=>{
 
               {
                 user?(<>
-                <h5 className='mb-0'>{user.uesrname}</h5>
+                <h5 className='mt-2 user-name'>{user.fullname}</h5>
                 <Button className='btn btn-dark' onClick={logout}>Logout</Button>
                 </>):(
                   <>
