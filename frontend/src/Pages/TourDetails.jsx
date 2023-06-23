@@ -53,10 +53,11 @@ console.log(tour);
       }
        
       const res = await fetch(`${BASE_URL}/review/${id}`,{
-        method:'POST ',
+        method:'POST',
         mode:'cors',
+        credentials: true,
         headers:{
-          'content-type':'application/json'
+          'Content-Type': 'application/json'
         },
       credentials:'include',
       body:JSON.stringify(reviewObj)
@@ -72,7 +73,7 @@ console.log(tour);
     }
     
 
-    // Submit form data to server or API
+  
   }
 
 

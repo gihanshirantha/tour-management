@@ -34,7 +34,7 @@ const Booking = ({tour,avgRating}) => {
     };
 
     const serviceFee=10;
-    const totalAmount=Number(price)*Number(credentials.guestSize) + Number(serviceFee)
+    const totalAmount=Number(price)*Number(booking.guestSize) + Number(serviceFee)
 
     // send data to server
     const hndleClick= async e=>{
@@ -72,7 +72,7 @@ const Booking = ({tour,avgRating}) => {
   return (
     <div className="booking">
         <div className="booking_top d-flex align-items-center justify-content-between">
-            <h3>${price}<span>/per Kilometer</span></h3>
+            <h3>${price}<span>/per Person</span></h3>
             <span className='tour_lrating d-flex align-items-center gap-1'>
                 <i class="fa-solid fa-star" style={{'color':"var(--secondary-color)"}}></i>
                 {avgRating===0? null : avgRating}({reviews?.length})
