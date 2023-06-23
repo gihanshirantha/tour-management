@@ -75,7 +75,7 @@ useEffect(()=>{
               {
                 user?(<>
                 <h5 className='mt-2 user-name'>{user.fullname}</h5>
-                <Button className='btn btn-dark' onClick={logout}>Logout</Button>
+                <Button className='btn btn-dark logout_btn' onClick={logout}>Logout</Button>
                 </>):(
                   <>
                   <Link to='/login'><Button className='login_btn' >Login</Button></Link>

@@ -18,7 +18,7 @@ import NewsLetter from '../Shared/NewsLetter'
 
 
 function Home() {
-
+window.scrollTo(0,0);
   return (
     <div>
       <section>

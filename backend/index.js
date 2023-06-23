@@ -17,9 +17,12 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 8000;
+
 const corsOption = {
-  origin: "*",
- 
+  origin: '*',
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  methods: '*',
+  credentials: true,
 };
 
 //database connection
@@ -56,10 +59,7 @@ app.use("/api/v1/vehicle", vehicleRoute);
 app.use("/api/v1/daytours", daytourRout);
 
 
-app.use((error, req, res, next) => {
-  console.error(error);
-  res.json({ error });
-});
+
 
 app.listen(port, () => {
   connect();

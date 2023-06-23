@@ -70,6 +70,7 @@ const handleClick= async e=>{
                       placeholder='Email' 
                       required 
                       id='email' 
+                      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                       onChange={handleChange} />
                     </FormGroup>
 
