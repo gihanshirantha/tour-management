@@ -17,15 +17,17 @@ const Booking = ({tour,avgRating}) => {
 
     const [booking, setBooking]=useState({
         userId:user && user._id,
-        fullName:'',
-        email:user && user.email,
+        tourId:tour && tour.id,
+        userName:'',
+        userEmail:user && user.email,
         country:'',
-        Cnumber:'',
-        Wnumber:'',
-        ArrivalDate:'',
-        DepartureDate:'',
+        contactNo:'',
+        whatsappNo:'',
+        startDate:'',
+        endDate:'',
         guestSize:'',
-        Message:''
+        massege:''
+        
 
     });
 
@@ -90,14 +92,14 @@ const Booking = ({tour,avgRating}) => {
                     <input 
                     type="text" 
                     placeholder='Full Name' 
-                    id='fullName'
+                    id='userName'
                      required onChange={handleChange} />
                 </FormGroup>
                 <FormGroup className='mb-3'>
                     <input 
                     type="email" 
                     placeholder='Email Address' 
-                    id='email'
+                    id='userEmail'
                      required onChange={handleChange} />
                 </FormGroup>
                 <FormGroup className='mb-3'>
@@ -111,14 +113,14 @@ const Booking = ({tour,avgRating}) => {
                     <input 
                     type="tel" 
                     placeholder='Contact Number' 
-                    id='Cnumber'
+                    id='contactNo'
                      required onChange={handleChange} />
                 </FormGroup>
                 <FormGroup className='mb-3'>
                     <input 
                     type="tel" 
                     placeholder='Whatsapp Number' 
-                    id='Wnumber'
+                    id='whatsappNo'
                      required onChange={handleChange} />
                 </FormGroup>
                 </div>
@@ -129,14 +131,14 @@ const Booking = ({tour,avgRating}) => {
                     <input 
                     type="date" 
                     placeholder='Arrival Date' 
-                    id='ArrivalDate'
+                    id='startDate'
                     required onChange={handleChange} />
                 </FormGroup>
                 <FormGroup className='mb-3'>
                     <input 
                     type="date" 
                     placeholder='Departure Date' 
-                    id='DepartureDate'
+                    id='endDate'
                      required onChange={handleChange} />
                 </FormGroup>
                 <FormGroup className='mb-3'>
@@ -150,7 +152,7 @@ const Booking = ({tour,avgRating}) => {
                     <input 
                     type="text" 
                     placeholder='Message' 
-                    id='Message'
+                    id='massege'
                      required onChange={handleChange} />
                 </FormGroup>
                 </div>

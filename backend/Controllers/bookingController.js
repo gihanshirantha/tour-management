@@ -12,8 +12,8 @@ export const createBooking = async (req, res) => {
     });
   } catch (err) {
     res.status(500).json({
-      success: fales,
-      message: "Internal server error",
+      success: false,
+      message: err,
     });
   }
 };

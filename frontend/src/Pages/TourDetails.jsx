@@ -27,7 +27,7 @@ console.log(tour);
  
 
   //Data
-  const{photo, title, desc,price,nights,reviews,days,distance,maxGroupSize}=tour;
+  const{_id,photo, title, desc,price,nights,reviews,days,distance,maxGroupSize}=tour;
   
 
 
@@ -55,7 +55,7 @@ console.log(tour);
       const res = await fetch(`${BASE_URL}/review/${id}`,{
         method:'POST',
         mode:'cors',
-        credentials: true,
+       
         headers:{
           'Content-Type': 'application/json'
         },

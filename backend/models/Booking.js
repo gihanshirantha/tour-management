@@ -5,6 +5,9 @@ const bookingSchema = new mongoose.Schema(
     userId: {
       type: String,
     },
+    tourId: {
+      type: String,
+    },
     userName: {
       type: String,
       required: true,
@@ -41,10 +44,8 @@ const bookingSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    totalAmount: {
-      type: Number,
-      required: true,
-    },
+
+
 
     payments: [
       {

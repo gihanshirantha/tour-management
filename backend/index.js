@@ -19,9 +19,9 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 const corsOption = {
-  origin: '*',
+  origin: 'http://localhost:3000',
   allowedHeaders: ['Content-Type', 'Authorization'],
-  methods: '*',
+  methods: 'GET,POST,PUT,DELETE',
   credentials: true,
 };
 

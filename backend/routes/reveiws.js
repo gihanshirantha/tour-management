@@ -4,6 +4,6 @@ import { verifyUser } from "../Utils/verifyToken.js";
 
 const router = express.Router();
 
-router.post("/:tourId", verifyUser, createReview);
+router.post("/:tourId", createReview);
 
 export default router;
