@@ -33,19 +33,42 @@
 
 .sticky_header{
     width: 100%;
-    height: 87px;
-    line-height: 80px;
+    height: 5rem;
+
     background: #ffff;
     position: sticky;
     top: 0;
+    padding-top: .8rem;
     left: 0;
     box-shadow: 3px 3px 8px -3px #ddd;
     z-index: 999;
     
 
 }
+
 .logout_btn{
-    height: 3rem;
+    height: 2.3rem;
+
+}
+
+.book_btn{
+    height: 2.3rem;
+font-size: .8rem;
+line-height: .7rem;
+align-items: center;
+background:var(--secondary-color) ;
+ border: none;
+}
+
+.book_btn:hover{
+    border: none;
+    background: var(--heading-color) !important;
+    color: #fff !important;
+}
+
+.user-name{
+    font-size: .8rem;
+    
 }
 
 .reg_btn:hover{

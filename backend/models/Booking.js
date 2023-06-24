@@ -8,6 +8,18 @@ const bookingSchema = new mongoose.Schema(
     tourId: {
       type: String,
     },
+    tourTitle:{
+      type: String,
+      required: true,
+    },
+    days:{
+      type: Number,
+      required: true,
+    },
+    price:{
+      type: Number,
+      required: true,
+    },
     userName: {
       type: String,
       required: true,

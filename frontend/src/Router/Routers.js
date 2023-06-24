@@ -11,6 +11,7 @@ import Register from './../Pages/Register';
 import Destinations from './../Pages/Destinations';
 import ThankYou from '../Pages/ThankYou';
 import About from '../Pages/About';
+import YourBookings from '../Pages/yourBookings';
 import AdminLogin from '../Admin/AdminLogin';
 
 
@@ -32,6 +33,9 @@ function Routers() {
         <Route path='/thank-you' element={<ThankYou/>}/>
         <Route path='/destinations' element={<Destinations/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/yourBooking/:id' element={<YourBookings/>}/>
+
+
 
 
     </Routes>

@@ -27,7 +27,7 @@ console.log(tour);
  
 
   //Data
-  const{_id,photo, title, desc,price,nights,reviews,days,distance,maxGroupSize}=tour;
+  const{photo, title, desc,price,nights,reviews,days,distance,maxGroupSize}=tour;
   
 
 

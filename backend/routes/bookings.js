@@ -4,6 +4,7 @@ import {
   updateBooking,
   getAllBookings,
   getSingleBookings,
+  getUsersBookings,
 } from "../Controllers/bookingController.js";
 
 import { verifyUser, verifyAdmin } from "../Utils/verifyToken.js";
@@ -21,5 +22,9 @@ router.get("/",  getAllBookings);
 
 // get single booking
 router.get("/:id", getSingleBookings);
+
+// get Users booking
+router.get("/users/:id", getUsersBookings);
+
 
 export default router;

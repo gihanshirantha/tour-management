@@ -10,6 +10,8 @@ import { BASE_URL } from '../../Utils/config';
 
 const Booking = ({tour,avgRating}) => {
 
+    
+
     const {price,reviews}=tour;
     const navigate=useNavigate();
 
@@ -18,6 +20,9 @@ const Booking = ({tour,avgRating}) => {
     const [booking, setBooking]=useState({
         userId:user && user._id,
         tourId:tour && tour.id,
+        tourTitle:tour && tour.title,
+        days:tour && tour.days,
+        price:tour && tour.price,
         userName:'',
         userEmail:user && user.email,
         country:'',
@@ -40,7 +45,7 @@ const Booking = ({tour,avgRating}) => {
 
     // send data to server
     const hndleClick= async e=>{
-        console.log(booking)
+        
         e.preventDefault()
 
         try {
