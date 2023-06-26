@@ -122,3 +122,58 @@ export const getUsersBookings = async (req, res) => {
     });
   }
 };
+
+
+//CancelBooking Booking
+
+export const cancelBooking = async (req, res) => {
+  const id = req.params.id;
+
+  try {
+    const updatedBooking = await Booking.findByIdAndUpdate(
+      id,
+      {
+        status: "Canceled",
+      },
+      { new: true }
+    );
+
+    res.status(200).json({
+      success: true,
+      message: "Canceled Your Booking",
+      data: updatedBooking,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: true,
+      message: "Not updated",
+    });
+  }
+};
+
+//ConfirmBooking Booking
+
+export const confirmBooking = async (req, res) => {
+  const id = req.params.id;
+
+  try {
+    const updatedBooking = await Booking.findByIdAndUpdate(
+      id,
+      {
+        status: "Confirm",
+      },
+      { new: true }
+    );
+
+    res.status(200).json({
+      success: true,
+      message: "Confirm Your Booking",
+      data: updatedBooking,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: true,
+      message: "Not updated",
+    });
+  }
+};
