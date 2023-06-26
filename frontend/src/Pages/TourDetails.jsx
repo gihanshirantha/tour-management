@@ -65,7 +65,7 @@ console.log(tour);
 
     const result=await res.json()
     if(!res.ok)alert(result.message)
-    alert("Review Submited")
+    alert("payment Submited")
   }
       
     } catch (err) {

@@ -4,6 +4,6 @@ import { verifyUser } from "../Utils/verifyToken.js";
 
 const router = express.Router();
 
-router.post("/:bookingId", verifyUser, createPayment);
+router.post("/:bookingId",  createPayment);
 
 export default router;

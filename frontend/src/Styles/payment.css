@@ -1,0 +1,83 @@
+.payment_card{
+    box-shadow: rgba(0,0,0,0.2) 0px 8px 30px -8px;
+    background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    padding: 1rem;
+    line-height: 2rem;
+    border-radius: 2rem;
+    padding-bottom: 3rem;
+    transition: .5s;
+}
+
+.payment_card:hover{
+    box-shadow: rgba(0,0,0,1) 0px 8px 30px -8px;
+
+}
+
+.payment_details h2{
+    text-align: center;
+    font-weight: 800;
+    color: white;
+
+    margin-bottom: 3rem;
+}
+
+.payment-form{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info label{
+    font-weight: 600;
+    color: white;
+    margin-left: 50px;
+}
+.info input{
+    display: inline-block;
+    max-width: 300px;
+    width: 300px;
+    background:white;
+
+    padding: .5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    margin-left: 50px;
+    color:black;
+}
+
+.payment_conf input{
+    display: inline-block;
+    max-width: 125px;
+    width: 125px;
+    background-color: white;
+    padding: .5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    margin-left: 50px;
+    margin-top: 30px;
+    color: black;
+}
+
+.submit-btn{
+    background:var(--secondary-color);
+    border: none;
+    max-width: 300px;
+    width: 300px;
+    border-radius: 4rem;
+    padding: 5px 20px;
+    transition: 0.5s;
+    margin-right: 1rem;
+    margin-top: 30px;
+    display: inline-block;
+    margin-left:50px ;
+    font-weight: 700;
+    color: white;
+}
+
+.submit-btn:hover{
+    background: var(--primary-color);
+
+}

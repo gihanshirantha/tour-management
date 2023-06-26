@@ -16,6 +16,7 @@ import AdminLogin from '../Admin/AdminLogin';
 import AddTours from '../Admin/AddTour'
 import Payment from '../Pages/Payment';
 
+import Layout from '../Components/Layout/Layout'
 
 
 
@@ -23,7 +24,7 @@ function Routers() {
   return (
     <Routes>
 
-      <Route>
+      <Route path='/' element={<Layout/>}>
         <Route path='/' element={<Navigate to='/home'/>}/>
 
         
