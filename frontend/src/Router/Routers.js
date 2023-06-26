@@ -14,6 +14,9 @@ import About from '../Pages/About';
 import YourBookings from '../Pages/yourBookings';
 import AdminLogin from '../Admin/AdminLogin';
 import AddTours from '../Admin/AddTour'
+import Payment from '../Pages/Payment';
+
+
 
 
 function Routers() {
@@ -37,6 +40,7 @@ function Routers() {
         <Route path='/destinations' element={<Destinations/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/yourBooking/:id' element={<YourBookings/>}/>
+        <Route path='/payment/:id' element={<Payment/>}/>
         </Route>
         <Route path='/admin' element={<AdminLogin/>}>
           <Route path='/admin/addtour' element={<AddTours/>}/>

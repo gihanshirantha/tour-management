@@ -1,10 +1,15 @@
 import React from 'react'
 import { Button ,Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import '../../Styles/yourBooking.css'
 import { BASE_URL } from '../../Utils/config';
 
 const BookingBar = ({booking}) => {
-    const {id,tourTitle,startDate,days,guestSize,price}=booking;
+
+      //Date format
+  const options = {day:'numeric', month:'long', year:'numeric'};
+    const {_id,tourTitle,startDate,days,guestSize,price,status}=booking;
+    
     const serviceFee=10;
     const totalAmount=Number(price)*Number(booking.guestSize) + Number(serviceFee)
 
@@ -14,9 +19,12 @@ const BookingBar = ({booking}) => {
                 e.preventDefault()
 
                 try {
-                    const res=await fetch(`${BASE_URL}/booking/${id}`,{
-                        method:'delete',
+                    const res=await fetch(`${BASE_URL}/booking/cancel/${_id}`,{
+                        method:'PUT',
                         mode:'cors',
+                        headers: {
+                            'Content-Type': 'application/json',
+                          },
 
                     });
                     const result=await res.json();
@@ -39,7 +47,7 @@ const BookingBar = ({booking}) => {
                 </div>
                 <div className="data_sdate">
                     <h3>Start Date</h3>
-                    <p>{startDate}</p>
+                    <p>{new Date(startDate).toLocaleDateString("en-US",options)}</p>
                 </div>
                 <div className="data_days">
                     <h3>Days</h3>
@@ -53,8 +61,15 @@ const BookingBar = ({booking}) => {
                     <h3>Price</h3>
                     <p>$ {totalAmount}</p>
                 </div>
+                <div className="data_status">
+                    <h3>Status</h3>
+                    <p>{status}</p>
+                </div>
                 <div className="data_sdate">
                     <h3>Option</h3>
+                    <Link to={`/payment/${_id}`}>
+          <Button className='btn payment__btn  !important' >Pay ${totalAmount}</Button>
+          </Link> 
           <Button className='btn delete__btn  !important' onClick={hndleClick}>Cancel</Button>
 
                 </div>
