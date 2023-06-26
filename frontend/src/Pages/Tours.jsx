@@ -8,7 +8,7 @@ import '../Styles/Tours.css'
 import Tourcard from '../Shared/Tourcard'
 import SearchBar from '../Shared/SearchBar'
 import NewsLetter from '../Shared/NewsLetter'
-import DayTourcard from '../Shared/DayTours/DayTourcard'
+
 import TopAttraction from '../Shared/Top-Attractions/TopAttraction'
 
 import useFetch from '../hooks/useFetch'
@@ -23,7 +23,7 @@ const[pageCount,setPageCount]=useState(0);
 const[page,setPage]=useState(0);
 
 const {data:tours, loading, error}=useFetch(`${BASE_URL}/tours?page=${page}`);
-const {data:daytours, load, err}=useFetch(`${BASE_URL}/daytours`);
+const {data:daytours, load, err}=useFetch(`${BASE_URL}/tours/search/getDayTours`);
 
 const {data:tourCount}=useFetch(`${BASE_URL}/tours/search/getTourCount`);
 
@@ -64,26 +64,17 @@ useEffect(()=>{
 of time or travelers who prefer to do excursions. We have amazing one day tour programmes for
 you. Please check it and let us know how you feel about it.</p>
           </Row>
-          {
-              load && <h4 className='text-centert pt-5'>Loading.......</h4>
-            }
-            {
-              err && <h4 className='text-centert pt-5'>{error}</h4>
 
-            }
-
-          {
-            !loading && !error && 
           <Row>
             {
-              daytours?.map(daytour=>(
-                <Col lg='4' key={daytour.id} className="mt-3" data-aos="fade-up"
+              daytours?.map(daytours=>(
+                <Col lg='3' key={daytours.id} className="mt-3" data-aos="fade-up"
                 data-aos-duration='2000'>
-                  <DayTourcard daytour={daytour}/>
+                  <Tourcard tour={daytours}/>
                 </Col>
               ))
             }
-          </Row>}
+          </Row>
           </Container>
       </section>
       

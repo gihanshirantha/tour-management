@@ -5,6 +5,7 @@ import {
   getAllBookings,
   getSingleBookings,
   getUsersBookings,
+  deleteBooking,
 } from "../Controllers/bookingController.js";
 
 import { verifyUser, verifyAdmin } from "../Utils/verifyToken.js";
@@ -16,6 +17,9 @@ router.post("/", createBooking);
 
 // update Booking
 router.put("/:id",  updateBooking);
+
+// delete Booking
+router.delete("/:id",  deleteBooking);
 
 //get all bookings
 router.get("/",  getAllBookings);

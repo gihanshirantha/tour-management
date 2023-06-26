@@ -13,11 +13,14 @@ import ThankYou from '../Pages/ThankYou';
 import About from '../Pages/About';
 import YourBookings from '../Pages/yourBookings';
 import AdminLogin from '../Admin/AdminLogin';
+import AddTours from '../Admin/AddTour'
 
 
 function Routers() {
   return (
     <Routes>
+
+      <Route>
         <Route path='/' element={<Navigate to='/home'/>}/>
 
         
@@ -34,7 +37,11 @@ function Routers() {
         <Route path='/destinations' element={<Destinations/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/yourBooking/:id' element={<YourBookings/>}/>
+        </Route>
+        <Route path='/admin' element={<AdminLogin/>}>
+          <Route path='/admin/addtour' element={<AddTours/>}/>
 
+        </Route>
 
 
 

@@ -1,9 +1,10 @@
 import React from 'react'
 import { Button ,Col } from 'react-bootstrap';
 import '../../Styles/yourBooking.css'
+import { BASE_URL } from '../../Utils/config';
 
 const BookingBar = ({booking}) => {
-    const {tourTitle,startDate,days,guestSize,price}=booking;
+    const {id,tourTitle,startDate,days,guestSize,price}=booking;
     const serviceFee=10;
     const totalAmount=Number(price)*Number(booking.guestSize) + Number(serviceFee)
 
@@ -11,6 +12,20 @@ const BookingBar = ({booking}) => {
             const hndleClick= async e=>{
         
                 e.preventDefault()
+
+                try {
+                    const res=await fetch(`${BASE_URL}/booking/${id}`,{
+                        method:'delete',
+                        mode:'cors',
+
+                    });
+                    const result=await res.json();
+                    if(!res.ok){
+                        return alert (result.message);
+                    }
+                } catch (err) {
+                    alert(err.message)
+                }
     
             }
         

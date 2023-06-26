@@ -27,7 +27,7 @@ function YourBookings() {
       }
       {!loading && !error &&
       booking?.map(booking=>(
-      <Col lg='12' className='data_table'data-aos="zoom-in" data-aos-duration='3000'>
+      <Col lg='12' key={booking.id} className='data_table'data-aos="zoom-in" data-aos-duration='3000'>
         <BookingBar booking={booking}/>
       </Col>))}
       </Container>

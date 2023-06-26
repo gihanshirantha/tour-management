@@ -1,23 +1,15 @@
 [
-    {
-        "title": "Galle Day Tour",
-        "city": "Galle",
-       "distance":"150",
-        "price": 200,
-        "maxGroupSize": 15,
-        "desc": "this is the description",
-        "reviews": [],
-        "photo": "tour-imag"
-        
-      },
+
 
           {
         "title": "Kithulgala Day Tour",
-        "city": "Kithulgala",
+        "days": 1,
+        "nights": 0,
+        "mode":"DayTour",
         "distance":"68",
-        "price": 200,
+        "price": 35,
         "maxGroupSize": 15,
-        "desc": "this is the description",
+        "desc": " Meet your guide on arrival at the Colombo Bandaranayke International airport or hotel. You can get started on your journey. After 2 hours drive from Colombo-Nuwara Eliya road, Kitulgala is a rain Forest patch that attracts many residents and foreign tourists for its natural beauty. the academy award-winning movie the bridge on the river kwai was filmed on the Kelani River near Kithulgala. Although nothing remains now except the concrete foundations for the bridge Kitulgala is the base for white-water rafting in Sri Lanka but there are myriad leisure and adventure activities that can be done in Kitulgala.",
         "reviews": [],
         "photo": "tour-images"
         
@@ -25,22 +17,26 @@
 
       {
         "title": "Sigiriya Day Tour",
-        "city": "Sigiriya",
+        "days": 1,
+        "nights": 0,
+        "mode":"DayTour",
         "distance":"146",
-        "price": 200,
+        "price": 40,
         "maxGroupSize": 15,
-        "desc": "this is the description",
+        "desc": "Meet your guide on arrival at the Colombo Bandaranayke international airport. You can start your journey. We will reach Sigiriya viaKurunagala.Kurunagala is situated at a high altitude most of the city is plain land except the surrounding rocks.You will reach Sigiriya enjoying the beauty along the way.Sigiriya rock fortress is one of Sri Lanka's most fascinating UNESCO world heritage.You can watch the most world-famous frescos painting of heaven maidens in the house of the cave and at the top of the rock, the ruins of the kingdom will show you the great architecture of the time. After watching Sigiriya you can go to the Elephant riding place.You have a choice to take a ride on an Elephant through the Jungle.After that you can visit Dambulla. In Dambulla, you can watch one of the biggest vegetable markets in Sri Lanka.Then you can proceed to the Dambulla cave temple.It is the most impressive cave temple in Asia. There are five caves under a vast overhanging rock, carved with a drip line to keep the interiors dry. It will bring you to the 1st century of BC. Inside the caves, the ceilings are painted with intricate patterns of religious images following the contours of the rock. Here you can see the collection of Buddha statues and murals related to the character of the Buddha. After this visit you can back to your destination with the greatest experience.",
         "reviews": [],
         "photo": "tour-images"
         
       },
       {
         "title": "Colombo Day Tour",
-        "city": "Colombo",
+        "days": 1,
+        "nights": 0,
+        "mode":"DayTour",
         "distance":"50",
-        "price": 200,
+        "price": 20,
         "maxGroupSize": 15,
-        "desc": "this is the description",
+        "desc": "Meet your guide on arrival at the Colombo Bandaranayke international airport or hotel in the morning or afternoon.Tour will begin from the Fort area of Colombo which has been named fort because of it being a fort during the times of Portuguese and Dutch.Later we will take you to Colombo National Museum to see some of the great specimens of arts, crafts, and archeology of Colombo.You will drive through the commercial areas and drive past Pettah, a colorful oriental bazaar, ancient vehicles, bargains, mosques, and temples. You have a chance to see a Hindu temple, a Buddhist Temple, and the Jami Ui Alfar Jumma mosque of Colombo.Continue your tour of Colombo through the Wolfe dhal Dutch Church, and Hafts Drop Law Courts as you drive along the residential area of Cinnamon Gardens and also visit the Independence Square and Bandaranayke memorial international conference Hall.Your tour will end here and we will bring you back to your respective hotel or airport.",
         "reviews": [],
         "photo": "/tour-images/dayt05.jpg"
         
@@ -48,11 +44,13 @@
 
       {
         "title": "Kandy Day Tour",
-        "city": "Kandy",
+        "days": 1,
+        "nights": 0,
+        "mode":"DayTour",
         "distance":"96",
-        "price": 200,
+        "price": 30,
         "maxGroupSize": 15,
-        "desc": "this is the description",
+        "desc": "Meet your guide on arrival at the Colombo Bandaranayke international airport. You can start Your Journey.Leave for Kandy in the morning. After that you proceed to the Elephant orphanage in Pinnawala.Around 09.15 start the feeding time of the baby Elephants getting their milk.While on your journey you can watch Elephants bathing on the river in the Elephant orphanage.If your wish then you can get an Elephant ride to the jungle in the Elephant riding place.Leave the Elephant Orphanage for the royal botanical garden of Peradeniya.There will be 4000 species of exotic plants.After that you can visit a tea factory and proceed to Kandy.The name Kandy is derived from the Sinhalese.Kandy is called Maha Nuwara, Senkadagalapura although this is most often shortened to Nuwara.You will visit the spice and herbal garden and Temple of the Tooth, The crown jewel of Buddhism.After that you can visit the Gem museum and see a batik factory, and silk factory and on the way back we will visit a tea factory.You can reach your destination with a lot of the greatest experiences.",
         "reviews": [],
         "photo": "/tour-images/dayt06.jpg"
         

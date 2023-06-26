@@ -4,7 +4,7 @@ import './DayTourcard.css'
 
 const DayTourcard = ({daytour}) => {
 
-    const {id,title,desc,photo}=daytour
+    const {_id,title,desc,photo}=daytour
 
   return (
     <article class="dcard">
@@ -22,7 +22,7 @@ const DayTourcard = ({daytour}) => {
         {desc}
       </p>
     </div>
-    <button class="card__button"><Link to={`/daytourDetails/${id}`}>Book Now</Link></button>
+    <button class="card__button"><Link to={`/daytourDetails/${_id}`}>Book Now</Link></button>
   </div>
 </article>
   )
