@@ -1,0 +1,33 @@
+.db_cbox{
+  
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+}
+
+.dbc_title{
+    text-align: center;
+    
+}
+.dbc_title h4{
+    font-weight: 700;    
+}
+.dbc_title h2{
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: 1.6rem;
+    color: white;
+}
+.dbc_link{
+    margin-top: 1rem;
+    margin-bottom: -0.5rem;
+    justify-content: space-between;
+}
+.dbc_link a{
+    font-size: .8rem;
+    
+}
+.dbc_link i{
+    margin-left: auto;
+}

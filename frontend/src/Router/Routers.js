@@ -12,11 +12,15 @@ import Destinations from './../Pages/Destinations';
 import ThankYou from '../Pages/ThankYou';
 import About from '../Pages/About';
 import YourBookings from '../Pages/yourBookings';
-import AdminLogin from '../Admin/AdminLogin';
-import AddTours from '../Admin/AddTour'
+
 import Payment from '../Pages/Payment';
 
+import Dashboard from '../Admin/Dashboard';
+import AdminLogin from '../Admin/AdminLogin';
+import AddTours from '../Admin/AddTour'
+
 import Layout from '../Components/Layout/Layout'
+import AdminApp from '../Components/Layout/AdminApp'
 
 
 
@@ -43,8 +47,16 @@ function Routers() {
         <Route path='/yourBooking/:id' element={<YourBookings/>}/>
         <Route path='/payment/:id' element={<Payment/>}/>
         </Route>
-        <Route path='/admin' element={<AdminLogin/>}>
+
+        <Route path='/admin/login' element={<AdminLogin/>}/>
+
+        <Route path='/admin' element={<AdminApp/>}>
+        <Route path='/admin' element={<Navigate to='/admin/dashboard'/>}/>
+
+
           <Route path='/admin/addtour' element={<AddTours/>}/>
+          <Route path='/admin/dashboard' element={<Dashboard/>}/>
+
 
         </Route>
 

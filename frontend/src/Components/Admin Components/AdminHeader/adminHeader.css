@@ -1,0 +1,41 @@
+.admin_header{
+   border-radius: 1rem;
+    height: 60px;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.3);
+-moz-box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.3);
+box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.3);
+}
+
+.ah_wording h5{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.ah_icons{
+    margin-left:auto ;
+
+}
+.ah-icon1{
+    margin-right: 2rem;
+    font-size: 1.3rem;
+}
+
+.notifi_count{
+    color: white;
+    background: rgb(255, 0, 0);
+    border-radius: 50%;
+    width: 1.8rem;
+}
+
+.notifi_count h5{
+    color: white;
+    position: fixed;
+    right: 53px;
+    top: 34px;
+}
+.ah-icon2{
+    font-size: 1.3rem;
+
+}
