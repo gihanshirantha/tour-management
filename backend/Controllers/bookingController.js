@@ -107,8 +107,8 @@ export const getUsersBookings = async (req, res) => {
   const userid = req.params.id;
   try {
     const booking = await Booking.find({
-      userId:userid,
-    })
+      userId: userid,
+    });
     res.status(200).json({
       success: true,
 
@@ -122,7 +122,6 @@ export const getUsersBookings = async (req, res) => {
     });
   }
 };
-
 
 //CancelBooking Booking
 
@@ -151,13 +150,12 @@ export const cancelBooking = async (req, res) => {
   }
 };
 
-// Canceled  bookings 
+// Canceled  bookings
 export const getCanceledBookings = async (req, res) => {
-  
   try {
     const booking = await Booking.find({
       status: "Canceled",
-    })
+    });
     res.status(200).json({
       success: true,
 
@@ -198,13 +196,12 @@ export const confirmBooking = async (req, res) => {
     });
   }
 };
-// Confirmed  bookings 
+// Confirmed  bookings
 export const getConfirmedBookings = async (req, res) => {
- 
   try {
     const booking = await Booking.find({
       status: "Confirm",
-    })
+    });
     res.status(200).json({
       success: true,
 
@@ -222,17 +219,14 @@ export const getConfirmedBookings = async (req, res) => {
 //confirmed bookings count
 
 export const ConfirmedBookingCount = async (req, res) => {
- 
-
   try {
-    const WaitingBookingCount = await Booking.countDocuments(
-    
-      {status: "Comfirm" },
-    );
+    const WaitingBookingCount = await Booking.countDocuments({
+      status: "Confirm",
+    });
 
     res.status(200).json({
       success: true,
-     
+
       data: WaitingBookingCount,
     });
   } catch (error) {
@@ -242,7 +236,6 @@ export const ConfirmedBookingCount = async (req, res) => {
     });
   }
 };
-
 
 //Finished Booking Booking
 
@@ -271,13 +264,12 @@ export const finishedBooking = async (req, res) => {
   }
 };
 
-// Finished  bookings 
+// Finished  bookings
 export const getFinishedBookings = async (req, res) => {
-  
   try {
     const booking = await Booking.find({
       status: "Finished",
-    })
+    });
     res.status(200).json({
       success: true,
 
@@ -295,17 +287,14 @@ export const getFinishedBookings = async (req, res) => {
 //Finished bookings count
 
 export const FinishedBookingCount = async (req, res) => {
- 
-
   try {
-    const WaitingBookingCount = await Booking.countDocuments(
-    
-      {status: "Finished" },
-    );
+    const WaitingBookingCount = await Booking.countDocuments({
+      status: "Finished",
+    });
 
     res.status(200).json({
       success: true,
-     
+
       data: WaitingBookingCount,
     });
   } catch (error) {
@@ -316,13 +305,12 @@ export const FinishedBookingCount = async (req, res) => {
   }
 };
 
-// waiting  bookings 
+// waiting  bookings
 export const getWaitingBookings = async (req, res) => {
-  
   try {
     const booking = await Booking.find({
       status: "Waiting",
-    })
+    });
     res.status(200).json({
       success: true,
 
@@ -337,9 +325,7 @@ export const getWaitingBookings = async (req, res) => {
   }
 };
 
-
-
-//Payment status update 
+//Payment status update
 
 export const doPaymentBooking = async (req, res) => {
   const id = req.params.id;
@@ -366,21 +352,17 @@ export const doPaymentBooking = async (req, res) => {
   }
 };
 
-//Payment status update 
+//Payment status update
 
 export const waitingPaidBookingCount = async (req, res) => {
- 
-
   try {
-    const WaitingBookingCount = await Booking.countDocuments(
-     
- 
-      {status: "Waiting" },
-    );
+    const WaitingBookingCount = await Booking.countDocuments({
+      status: "Waiting",
+    });
 
     res.status(200).json({
       success: true,
-     
+
       data: WaitingBookingCount,
     });
   } catch (error) {

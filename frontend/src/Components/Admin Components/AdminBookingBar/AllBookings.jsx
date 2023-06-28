@@ -13,15 +13,15 @@ const AllBookings = () => {
     <>
     <div className="select_buttons">
     <Link to={'/admin/allbooking'}>
-       <Button className='admin_bokking_btn' >All Tours</Button></Link>
+       <Button className='admin_bokking_btn' >All Bookings</Button></Link>
        <Link to={'/admin/waitingbooking'}>
-      <Button className='admin_bokking_btn'>Waiting Tours</Button></Link>
+      <Button className='admin_bokking_btn'>Waiting Bookings</Button></Link>
 
       <Link to={'/admin/confirmedbooking'}>
-      <Button className='admin_bokking_btn'>Confirmed Tours</Button></Link>
+      <Button className='admin_bokking_btn'>Confirmed Bookings</Button></Link>
 
       <Link to={'/admin/finishedbooking'}>
-      <Button className='admin_bokking_btn'>Finished Tours</Button></Link>
+      <Button className='admin_bokking_btn'>Finished Bookings</Button></Link>
 
   
 </div>

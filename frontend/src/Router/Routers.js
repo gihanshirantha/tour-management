@@ -24,6 +24,7 @@ import AllBookings from '../Components/Admin Components/AdminBookingBar/AllBooki
 import WaitingBookings from '../Components/Admin Components/AdminBookingBar/WaitingBookings'
 import FinishedBooking from '../Components/Admin Components/AdminBookingBar/FinishedBokings'
 import ConfirmedBooking from '../Components/Admin Components/AdminBookingBar/ConfirmedBookings'
+import ViewBooking from '../Admin/ViewBooking';
 
 import Layout from '../Components/Layout/Layout'
 import AdminApp from '../Components/Layout/AdminApp'
@@ -67,13 +68,7 @@ function Routers() {
           <Route path='/admin/waitingbooking' element={<WaitingBookings/>}/>
           <Route path='/admin/confirmedbooking' element={<ConfirmedBooking/>}/>
           <Route path='/admin/finishedbooking' element={<FinishedBooking/>}/>
-
-
-
-
-
-
-
+          <Route path='/admin/viewbooking/:id' element={<ViewBooking/>}/>
 
         </Route>
 

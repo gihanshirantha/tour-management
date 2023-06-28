@@ -23,7 +23,7 @@ const {data:waitingCount}=useFetch(`${BASE_URL}/booking/search/paidwaiting`);
                 <i class="fa-solid fa-right-from-bracket"></i>
                 </Link>
                 <div className="notification d-flex">
-                <Link to='/admin/tours'className='ah-icon2'>
+                <Link to='/admin/waitingbooking'className='ah-icon2'>
                 <i class="fa-solid fa-bell"></i>
                 </Link>
                 <div className="notifi_count">
