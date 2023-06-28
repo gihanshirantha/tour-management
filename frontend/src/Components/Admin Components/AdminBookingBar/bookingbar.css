@@ -9,12 +9,27 @@ text-align: center;
 
 }
 
+.scrollsection{
+    height: 70vh;
+    overflow-y: scroll;
+    scrollbar-color: red orange;
+    scrollbar-width: thin;
+}
+.scrollsection::-webkit-scrollbar {
+    display: none;
+}
 .admin_bokking_btn{
     background: var(--secondary-color);
     border: none;
     margin-left: 1rem;
     border-radius: 3rem;
+    transition: .5s;
     
+}
+.admin_bokking_btn:hover{
+    border: none;
+    background: var(--primary-color) !important;
+    color: #fff !important;
 }
 
 .admin_booking_header{

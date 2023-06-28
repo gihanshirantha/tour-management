@@ -1,0 +1,17 @@
+.at_head{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    justify-content: space-between;
+}
+
+.atcount p{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.atcount span{
+    margin-left: 0.4rem;
+    background: var(--secondary-color);
+    padding: .5rem .7rem;
+    border-radius: 2rem;
+}

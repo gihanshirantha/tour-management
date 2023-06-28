@@ -59,7 +59,7 @@ const AllBookings = () => {
   
 
 </div>
-    <div>
+    <div className="scrollsection">
      
 
         {

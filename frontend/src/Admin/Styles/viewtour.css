@@ -1,0 +1,75 @@
+.atour_content img {
+  width: 25rem;
+  border-radius: 2rem;
+}
+.tvandreviews{
+  height: 88vh;
+    overflow-y: scroll;
+  scrollbar-color: red orange;
+  scrollbar-width: thin;
+
+}
+
+.atour_content {
+  margin-top: 1rem;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  border-radius: 2rem;
+  
+}
+.tvandreviews::-webkit-scrollbar {
+  display: none;
+}
+.atour_info h5 {
+  margin-top: 1rem;
+}
+
+.atour_info h1 {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.atourextra-details span {
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+.atourextra-details i {
+  margin-right: 0.5rem;
+}
+.at_info {
+  margin-bottom: 1rem;
+}
+.at_info span {
+  font-weight: 500;
+}
+
+.at_update_btn button {
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 2rem;
+  transition: 0.3s;
+}
+.at_update_btn button:hover {
+  background: var(--primary-color);
+}
+.at_update_btn {
+  margin-left: auto;
+}
+
+.all_review {
+  margin-top: 1rem;
+  background: #c8ffdc;
+  padding: 1rem;
+  border-radius: 2rem 2rem 2rem 0;
+}
+.all_review button {
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 2rem;
+  transition: 0.3s;
+}
+.all_review button:hover {
+  background: red;
+}

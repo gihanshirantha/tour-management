@@ -29,6 +29,7 @@ import ViewBooking from '../Admin/ViewBooking';
 import AllTours from '../Components/Admin Components/TourManagement/AllTours'
 import DayTours from '../Components/Admin Components/TourManagement/DayTours'
 import RoundTours from '../Components/Admin Components/TourManagement/RoundTours'
+import ViewTourDetails from '../Admin/ViewTourDetails'
 
 import Layout from '../Components/Layout/Layout'
 import AdminApp from '../Components/Layout/AdminApp'
@@ -77,6 +78,8 @@ function Routers() {
           <Route path='/admin/alltours' element={<AllTours/>}/>
           <Route path='/admin/daytours' element={<DayTours/>}/>
           <Route path='/admin/roundtours' element={<RoundTours/>}/>
+          <Route path='/admin/viewtour/:id' element={<ViewTourDetails/>}/>
+
 
 
         </Route>

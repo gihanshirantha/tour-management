@@ -26,7 +26,7 @@ const LeftNavigation = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to={'#'}>
+                        <Link to={'/admin/alltours'}>
                         <div className="list_item d-flex mb-3">
                             <div className="sb_icon">
                             <i class="fa-solid fa-plane"></i>

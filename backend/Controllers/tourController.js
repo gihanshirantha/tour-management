@@ -99,7 +99,7 @@ export const getAllTour = async (req, res) => {
       .skip(page * 8)
       .limit(8);
 
-      if (!tours) sendNotFoundResponse(res, "tours");
+    if (!tours) sendNotFoundResponse(res, "tours");
 
     res.status(200).json({
       success: true,
@@ -168,7 +168,7 @@ export const getFeaturedTour = async (req, res) => {
 
 export const getRoundTour = async (req, res) => {
   try {
-    const tours = await Tour.find({}).populate("reviews");
+    const tours = await Tour.find({});
 
     if (!tours) sendNotFoundResponse(res, "Featured tours");
 
@@ -197,6 +197,43 @@ export const getDayTour = async (req, res) => {
       success: true,
       message: "successful",
       data: tours,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "not found",
+    });
+  }
+};
+// get day tour Count
+export const getDayTourCount = async (req, res) => {
+  try {
+    const tourCount = await Tour.countDocuments({
+      mode: "DayTour",
+    });
+    res.status(200).json({
+      success: true,
+
+      data: tourCount,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "not found",
+    });
+  }
+};
+
+// get Round tour Count
+export const getRoundTourCount = async (req, res) => {
+  try {
+    const tourCount = await Tour.countDocuments({
+      mode: "RoundTour",
+    });
+    res.status(200).json({
+      success: true,
+
+      data: tourCount,
     });
   } catch (error) {
     res.status(500).json({
