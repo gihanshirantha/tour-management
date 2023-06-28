@@ -38,11 +38,29 @@ const Payment = () => {
 
         const result=await res.json()
         if(!res.ok)alert(result.message)
-        alert("Review Submited")
+        alert("Payment Submited")
           navigate("/thank-you")
         } catch (err) {
           alert(err.message)
         }
+
+        try {
+          const res=await fetch(`${BASE_URL}/booking/payment/${id}`,{
+              method:'PUT',
+              mode:'cors',
+              headers: {
+                  'Content-Type': 'application/json',
+                },
+
+          });
+          const result=await res.json();
+          if(!res.ok){
+              return alert (result.message);
+          }
+      } catch (err) {
+          alert(err.message)
+      }
+
         }
 
   return (

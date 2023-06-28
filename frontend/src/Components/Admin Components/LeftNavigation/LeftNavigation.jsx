@@ -37,7 +37,7 @@ const LeftNavigation = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to={'#'}>
+                        <Link to={'/admin/allbooking'}>
                         <div className="list_item d-flex mb-3">
                             <div className="sb_icon">
                             <i class="fa-solid fa-calendar-days"></i>

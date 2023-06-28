@@ -19,6 +19,12 @@ import Dashboard from '../Admin/Dashboard';
 import AdminLogin from '../Admin/AdminLogin';
 import AddTours from '../Admin/AddTour'
 
+
+import AllBookings from '../Components/Admin Components/AdminBookingBar/AllBookings'
+import WaitingBookings from '../Components/Admin Components/AdminBookingBar/WaitingBookings'
+import FinishedBooking from '../Components/Admin Components/AdminBookingBar/FinishedBokings'
+import ConfirmedBooking from '../Components/Admin Components/AdminBookingBar/ConfirmedBookings'
+
 import Layout from '../Components/Layout/Layout'
 import AdminApp from '../Components/Layout/AdminApp'
 
@@ -56,6 +62,17 @@ function Routers() {
 
           <Route path='/admin/addtour' element={<AddTours/>}/>
           <Route path='/admin/dashboard' element={<Dashboard/>}/>
+          
+          <Route path='/admin/allbooking' element={<AllBookings/>}/>
+          <Route path='/admin/waitingbooking' element={<WaitingBookings/>}/>
+          <Route path='/admin/confirmedbooking' element={<ConfirmedBooking/>}/>
+          <Route path='/admin/finishedbooking' element={<FinishedBooking/>}/>
+
+
+
+
+
+
 
 
         </Route>

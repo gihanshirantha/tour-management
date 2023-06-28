@@ -6,7 +6,17 @@ import {
   getSingleBookings,
   getUsersBookings,
   deleteBooking,
-  cancelBooking
+  cancelBooking,
+  doPaymentBooking,
+  waitingPaidBookingCount,
+  confirmBooking,
+  finishedBooking,
+  getCanceledBookings,
+  getConfirmedBookings,
+  getFinishedBookings,
+  FinishedBookingCount,
+  ConfirmedBookingCount,
+  getWaitingBookings
 } from "../Controllers/bookingController.js";
 
 import { verifyUser, verifyAdmin } from "../Utils/verifyToken.js";
@@ -33,6 +43,37 @@ router.get("/users/:id", getUsersBookings);
 
 // cancel booking
 router.put("/cancel/:id", cancelBooking);
+
+// cancel booking
+router.get("/canceledBookings", getCanceledBookings);
+
+// confirm booking
+router.put("/confirm/:id", confirmBooking);
+
+// Confirmed booking
+router.get("/search/confirmedBookings", getConfirmedBookings);
+
+// Confirmed booking Count
+router.get("/search/confirmed", ConfirmedBookingCount );
+
+// finished booking
+router.put("/finished/:id", finishedBooking);
+
+// finished booking
+router.get("/search/finishedBookings", getFinishedBookings);
+
+// Finished booking Count
+router.get("/search/finished", FinishedBookingCount );
+
+// payment update booking
+router.put("/payment/:id", doPaymentBooking);
+
+// Paid waiting tour Count
+router.get("/search/paidwaiting", waitingPaidBookingCount);
+
+// waiting booking
+router.get("/search/waitingBookings", getWaitingBookings);
+
 
 
 export default router;

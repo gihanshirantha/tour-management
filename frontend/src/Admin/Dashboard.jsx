@@ -3,8 +3,24 @@ import './Styles/dashboad.css'
 import {Row,Col} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 
+import useFetch from '../hooks/useFetch'
+import { BASE_URL } from '../Utils/config'
+
 
 const Dashboard = () => {
+
+const {data:tourCount}=useFetch(`${BASE_URL}/tours/search/getTourCount`);
+const {data:waiting}=useFetch(`${BASE_URL}/booking/search/paidwaiting`);
+const {data:confirmed}=useFetch(`${BASE_URL}/booking/search/confirmed`);
+const {data:finished}=useFetch(`${BASE_URL}/booking/search/finished`);
+
+
+
+
+
+
+  
+
   return (
     <div>
       <Row>
@@ -12,7 +28,7 @@ const Dashboard = () => {
           <div className="db_cbox">
             <div className="dbc_title">
               <h4>Tour Packages</h4>
-              <h2>100</h2>
+              <h2>{tourCount}</h2>
             </div>
             <div className="dbc_link d-flex">
             <Link to={'#'}>See more details</Link>
@@ -25,8 +41,8 @@ const Dashboard = () => {
         <Col lg='3'>
           <div className="db_cbox">
             <div className="dbc_title">
-              <h4>Vehicles</h4>
-              <h2>13</h2>
+              <h4>Waiting Bookings</h4>
+              <h2>{waiting}</h2>
             </div>
             <div className="dbc_link d-flex">
             <Link to={'#'}>See more details</Link>
@@ -39,8 +55,8 @@ const Dashboard = () => {
         <Col lg='3'>
           <div className="db_cbox">
             <div className="dbc_title">
-              <h4>Bookings</h4>
-              <h2>68</h2>
+              <h4>Confirmed Bookings</h4>
+              <h2>{confirmed}</h2>
             </div>
             <div className="dbc_link d-flex">
             <Link to={'#'}>See more details</Link>
@@ -53,8 +69,8 @@ const Dashboard = () => {
         <Col lg='3'>
           <div className="db_cbox">
             <div className="dbc_title">
-              <h4>Users</h4>
-              <h2>98</h2>
+              <h4>Finished Bookings</h4>
+              <h2>{finished}</h2>
             </div>
             <div className="dbc_link d-flex">
             <Link to={'#'}>See more details</Link>

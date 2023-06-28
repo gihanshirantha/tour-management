@@ -8,7 +8,7 @@ const BookingBar = ({booking}) => {
 
       //Date format
   const options = {day:'numeric', month:'long', year:'numeric'};
-    const {_id,tourTitle,startDate,days,guestSize,price,status}=booking;
+    const {_id,tourTitle,startDate,days,guestSize,price,status,payment_status}=booking;
     
     const serviceFee=10;
     const totalAmount=Number(price)*Number(booking.guestSize) + Number(serviceFee)
@@ -64,6 +64,10 @@ const BookingBar = ({booking}) => {
                 <div className="data_status">
                     <h3>Status</h3>
                     <p>{status}</p>
+                </div>
+                <div className="data_status">
+                    <h3>Payment</h3>
+                    <p>{payment_status}</p>
                 </div>
                 <div className="data_sdate">
                     <h3>Option</h3>

@@ -11,12 +11,13 @@
     
 }
 .dbc_title h4{
-    font-weight: 700;    
+    font-weight: 700; 
+    font-size: 1.2rem;   
 }
 .dbc_title h2{
     font-weight: 800;
     font-size: 3rem;
-    line-height: 1.6rem;
+    line-height: 1.8rem;
     color: white;
 }
 .dbc_link{

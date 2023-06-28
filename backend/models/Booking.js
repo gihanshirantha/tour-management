@@ -60,6 +60,11 @@ const bookingSchema = new mongoose.Schema(
       type: String,
       default: "Waiting",
     },
+    payment_status:{
+      type: String,
+      default: "Not Paid",
+    },
+
 
 
 

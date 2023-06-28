@@ -1,0 +1,68 @@
+
+.select_buttons{
+  margin-top: 1rem;
+  align-items: center;
+  
+  padding: 10px 20px;
+  border-radius: 30px;
+text-align: center;
+
+}
+
+.admin_bokking_btn{
+    background: var(--secondary-color);
+    border: none;
+    margin-left: 1rem;
+    border-radius: 3rem;
+    
+}
+
+.admin_booking_header{
+    margin-top: 1rem;
+    
+    border-bottom: 2px solid #ababab;
+}
+.admin_booking_header p{
+    font-weight: 800;
+}
+.admin_booking_data {
+    margin-top: 1rem;
+    
+    border-bottom: 2px solid #ababab;
+}
+.htitle{
+    
+    text-align: center;
+    margin-right: 3rem;
+}
+.hdata{
+   
+    text-align: center;
+    margin-right: 3rem;
+}
+.hstatuses{
+    justify-content: space-between;
+    margin-left: 2rem;
+    text-align: center;
+    
+}
+.hstatusesdata{
+    text-align: center;
+    color: red;
+    font-weight: 600;
+}
+
+.hoptions{
+    text-align: center;
+    margin-right: 1rem;
+}
+.option_btns{
+    margin-left: 1rem;
+    position: relative;
+    bottom: .5rem;
+}
+
+
+.admin_bookinginfo_bar{
+
+}

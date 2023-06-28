@@ -1,8 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './adminHeader.css'
+import useFetch from '../../../hooks/useFetch'
+import { BASE_URL } from '../../../Utils/config'
 
 const AdminHeader = () => {
+
+const {data:waitingCount}=useFetch(`${BASE_URL}/booking/search/paidwaiting`);
+
+
   return (
     <div>
         <div className="admin_header d-flex">
@@ -21,7 +27,7 @@ const AdminHeader = () => {
                 <i class="fa-solid fa-bell"></i>
                 </Link>
                 <div className="notifi_count">
-                    <h5>3</h5>
+                    <h5>{waitingCount}</h5>
                 </div>
                 </div>
 

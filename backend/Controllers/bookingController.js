@@ -151,7 +151,28 @@ export const cancelBooking = async (req, res) => {
   }
 };
 
-//ConfirmBooking Booking
+// Canceled  bookings 
+export const getCanceledBookings = async (req, res) => {
+  
+  try {
+    const booking = await Booking.find({
+      status: "Canceled",
+    })
+    res.status(200).json({
+      success: true,
+
+      message: "Successfull",
+      data: booking,
+    });
+  } catch (error) {
+    res.status(404).json({
+      success: true,
+      message: "Not found",
+    });
+  }
+};
+
+//Confirm Booking
 
 export const confirmBooking = async (req, res) => {
   const id = req.params.id;
@@ -167,6 +188,173 @@ export const confirmBooking = async (req, res) => {
 
     res.status(200).json({
       success: true,
+      message: "Confirmed Your Booking",
+      data: updatedBooking,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: true,
+      message: "Not updated",
+    });
+  }
+};
+// Confirmed  bookings 
+export const getConfirmedBookings = async (req, res) => {
+ 
+  try {
+    const booking = await Booking.find({
+      status: "Confirm",
+    })
+    res.status(200).json({
+      success: true,
+
+      message: "Successfull",
+      data: booking,
+    });
+  } catch (error) {
+    res.status(404).json({
+      success: true,
+      message: "Not found",
+    });
+  }
+};
+
+//confirmed bookings count
+
+export const ConfirmedBookingCount = async (req, res) => {
+ 
+
+  try {
+    const WaitingBookingCount = await Booking.countDocuments(
+    
+      {status: "Comfirm" },
+    );
+
+    res.status(200).json({
+      success: true,
+     
+      data: WaitingBookingCount,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: true,
+      message: "Not found",
+    });
+  }
+};
+
+
+//Finished Booking Booking
+
+export const finishedBooking = async (req, res) => {
+  const id = req.params.id;
+
+  try {
+    const updatedBooking = await Booking.findByIdAndUpdate(
+      id,
+      {
+        status: "Finished",
+      },
+      { new: true }
+    );
+
+    res.status(200).json({
+      success: true,
+      message: "Update Your Booking",
+      data: updatedBooking,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: true,
+      message: "Not updated",
+    });
+  }
+};
+
+// Finished  bookings 
+export const getFinishedBookings = async (req, res) => {
+  
+  try {
+    const booking = await Booking.find({
+      status: "Finished",
+    })
+    res.status(200).json({
+      success: true,
+
+      message: "Successfull",
+      data: booking,
+    });
+  } catch (error) {
+    res.status(404).json({
+      success: true,
+      message: "Not found",
+    });
+  }
+};
+
+//Finished bookings count
+
+export const FinishedBookingCount = async (req, res) => {
+ 
+
+  try {
+    const WaitingBookingCount = await Booking.countDocuments(
+    
+      {status: "Finished" },
+    );
+
+    res.status(200).json({
+      success: true,
+     
+      data: WaitingBookingCount,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: true,
+      message: "Not found",
+    });
+  }
+};
+
+// waiting  bookings 
+export const getWaitingBookings = async (req, res) => {
+  
+  try {
+    const booking = await Booking.find({
+      status: "Waiting",
+    })
+    res.status(200).json({
+      success: true,
+
+      message: "Successfull",
+      data: booking,
+    });
+  } catch (error) {
+    res.status(404).json({
+      success: true,
+      message: "Not found",
+    });
+  }
+};
+
+
+
+//Payment status update 
+
+export const doPaymentBooking = async (req, res) => {
+  const id = req.params.id;
+
+  try {
+    const updatedBooking = await Booking.findByIdAndUpdate(
+      id,
+      {
+        payment_status: "Paid",
+      },
+      { new: true }
+    );
+
+    res.status(200).json({
+      success: true,
       message: "Confirm Your Booking",
       data: updatedBooking,
     });
@@ -174,6 +362,31 @@ export const confirmBooking = async (req, res) => {
     res.status(500).json({
       success: true,
       message: "Not updated",
+    });
+  }
+};
+
+//Payment status update 
+
+export const waitingPaidBookingCount = async (req, res) => {
+ 
+
+  try {
+    const WaitingBookingCount = await Booking.countDocuments(
+     
+ 
+      {status: "Waiting" },
+    );
+
+    res.status(200).json({
+      success: true,
+     
+      data: WaitingBookingCount,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: true,
+      message: "Not found",
     });
   }
 };
