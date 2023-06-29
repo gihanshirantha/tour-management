@@ -16,11 +16,24 @@ var fea="";
 
     const handleDelete = async (e) => {
         e.preventDefault();
+        try {
+          const res=await fetch(`${BASE_URL}/tours/${_id}`,{
+              method:'DELETE',
+              mode:'cors',
+              headers: {
+                  'Content-Type': 'application/json',
+                },
+    
+          });
+          const result=await res.json();
+          if(res.ok){
+              return alert (result.message);
+          }
+      } catch (err) {
+          alert(err.message)
+      }
     }
 
-    const handleUpdate = async (e) => {
-        e.preventDefault();
-    }
 
   return (
     <div>
