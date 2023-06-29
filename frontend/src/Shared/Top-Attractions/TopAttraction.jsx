@@ -26,8 +26,8 @@ const TopAttraction = () => {
             alt="people"
           />
           <div class="carousel-item__details">
-            <h5 class="carousel-item__details--title">Sigiriya</h5>
-            <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+            <h5 class="carousel-item__details--title">Galle</h5>
+            <h6 class="carousel-item__details--subtitle">Galle Dutch Fort</h6>
           </div>
         </div>
         <div class="carousel-item">
@@ -37,8 +37,8 @@ const TopAttraction = () => {
             alt="people"
           />
           <div class="carousel-item__details">
-            <h5 class="carousel-item__details--title">Sigiriya</h5>
-            <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+            <h5 class="carousel-item__details--title">Kithulgala</h5>
+            <h6 class="carousel-item__details--subtitle">Adventure <br/> Water Rafting</h6>
           </div>
         </div>
         <div class="carousel-item">
@@ -49,7 +49,7 @@ const TopAttraction = () => {
           />
           <div class="carousel-item__details">
             <h5 class="carousel-item__details--title">Sigiriya</h5>
-            <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+            <h6 class="carousel-item__details--subtitle">An ancient rock</h6>
           </div>
         </div>
         <div class="carousel-item">
@@ -59,8 +59,8 @@ const TopAttraction = () => {
             alt="people"
           />
           <div class="carousel-item__details">
-            <h5 class="carousel-item__details--title">Sigiriya</h5>
-            <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+            <h5 class="carousel-item__details--title">Colombo</h5>
+            <h6 class="carousel-item__details--subtitle">Capital and <br/>largest city</h6>
           </div>
         </div>
         <div class="carousel-item">
@@ -70,8 +70,8 @@ const TopAttraction = () => {
             alt="people"
           />
           <div class="carousel-item__details">
-            <h5 class="carousel-item__details--title">Sigiriya</h5>
-            <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+            <h5 class="carousel-item__details--title">Kandy</h5>
+            <h6 class="carousel-item__details--subtitle">Temple of the Tooth<br/> (Sri Dalada Maligawa)</h6>
           </div>
         </div>
         <div class="carousel-item">
@@ -81,8 +81,8 @@ const TopAttraction = () => {
             alt="people"
           />
           <div class="carousel-item__details">
-            <h5 class="carousel-item__details--title">Sigiriya</h5>
-            <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+            <h5 class="carousel-item__details--title">Negombo</h5>
+            <h6 class="carousel-item__details--subtitle">Negombo Beach</h6>
           </div>
         </div>
 
