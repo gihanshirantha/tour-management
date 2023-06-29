@@ -13,6 +13,7 @@ const ViewTourDetails = () => {
   const { id } = useParams();
   const { data: tour, loading, error } = useFetch(`${BASE_URL}/tours/${id}`);
   const {
+    __id,
     photo,
     title,
     desc,
@@ -23,15 +24,49 @@ const ViewTourDetails = () => {
     distance,
     maxGroupSize,
   } = tour;
-  
+
   const { totalRating, avgRating } = calculateAvgRating(reviews);
 
   //Date format
   const options = { day: "numeric", month: "long", year: "numeric" };
 
-  const deleteReview=(_id)=>async (e)=>{
-        console.log(_id)
-  }
+  const deleteReview = (_id) => async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch(`${BASE_URL}/review/${_id}`, {
+        method: "DELETE",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const result = await res.json();
+      if (res.ok) {
+        return alert(result.message);
+      }
+    } catch (err) {
+      alert(err.message);
+    }
+  };
+
+  const deleteTour = (__id) => async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch(`${BASE_URL}/tours/${__id}`, {
+        method: "DELETE",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const result = await res.json();
+      if (res.ok) {
+        return alert(result.message);
+      }
+    } catch (err) {
+      alert(err.message);
+    }
+  };
 
   return (
     <div className="tvandreviews">
@@ -43,12 +78,25 @@ const ViewTourDetails = () => {
             <div className="atour_content">
               <div className="at_img d-flex">
                 <img src={photo} alt="" />
+
                 <div className="at_update_btn">
-                  <Link>
+                  <Link to="/admin/alltours">
+                    <Button>
+                      <i class="fa-solid fa-arrow-left"></i>
+                    </Button>
+                  </Link>
+                </div>
+                <div className="at_update_btn">
+                  <Link to={`/admin/updatetour/${id}`}>
                     <Button>
                       <i class="fa-solid fa-pen-to-square"></i> Update Tour
                     </Button>
                   </Link>
+                </div>
+                <div className="at_delete_btn">
+                  <Button onClick={deleteTour(__id)} className="btn btn-danger">
+                    <i class="fa-solid fa-trash"></i>
+                  </Button>
                 </div>
               </div>
 

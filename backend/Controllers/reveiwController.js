@@ -23,3 +23,22 @@ export const createReview = async (req, res) => {
     });
   }
 };
+
+//delete tour
+
+export const deleteReview = async (req, res) => {
+  const id = req.params.id;
+  try {
+    await Review.findByIdAndDelete(id);
+
+    res.status(200).json({
+      success: true,
+      message: "successfully deleted",
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: true,
+      message: "Not deleted",
+    });
+  }
+};

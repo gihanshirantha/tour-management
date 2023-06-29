@@ -39,9 +39,11 @@ const AllTours = () => {
           </Link>
         </div>
         <div className="at_AddTourBtn">
+        <Link to={"/admin/addnewtour"}>
           <Button className="admin_bokking_btn">
             <i class="fa-solid fa-plus"></i> Add Tour
           </Button>
+          </Link>
         </div>
       </div>
       <div className="admin_booking_header d-flex">

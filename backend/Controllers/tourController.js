@@ -16,7 +16,7 @@ export const createTour = async (req, res) => {
     });
   } catch (err) {
     res.status(500).json({
-      success: fales,
+      success: false,
       message: "failed to crate tour",
     });
   }

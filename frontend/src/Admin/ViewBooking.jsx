@@ -75,7 +75,7 @@ const ViewBooking = () => {
         </Col>
         <Col lg="4">
           <div className="bvtitle">
-            <h3>User Details</h3>
+            <h3>Client Details</h3>
           </div>
           <div className="bvinfo_box1">
             <div className="bvset1">

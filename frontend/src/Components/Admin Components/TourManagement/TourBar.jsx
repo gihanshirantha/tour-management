@@ -50,12 +50,13 @@ var fea="";
         </Col>
         <Col lg="4">
           <div className="hoptions">
+            <Link to={`/admin/updatetour/${_id}`}>
             <Button
               className="option_btns btn btn-success"
-              onClick={handleUpdate}
             >
               <i class="fa-solid fa-pen-to-square"></i>
             </Button>
+            </Link>
 
             <Button
               className="option_btns btn btn-danger"

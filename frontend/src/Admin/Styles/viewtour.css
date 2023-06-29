@@ -4,6 +4,7 @@
 }
 .tvandreviews{
   height: 88vh;
+  
     overflow-y: scroll;
   scrollbar-color: red orange;
   scrollbar-width: thin;
@@ -56,6 +57,16 @@
 }
 .at_update_btn {
   margin-left: auto;
+}
+.at_delete_btn {
+  margin-left: auto;
+}
+
+.at_delete_btn button{
+  border: none;
+ border-radius: 2rem;
+
+  transition: 0.3s;
 }
 
 .all_review {
