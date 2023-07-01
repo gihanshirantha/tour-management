@@ -103,3 +103,84 @@ export const getAllUser = async (req, res) => {
   }
 };
 
+// Web users
+export const getAllWebUsers = async (req, res) => {
+  try {
+    const user = await User.find({
+      role: "user",
+    });
+    res.status(200).json({
+      success: true,
+
+      message: "Successfull",
+      data: user,
+    });
+  } catch (error) {
+    res.status(404).json({
+      success: true,
+      message: "Not found",
+    });
+  }
+};
+
+//confirmed bookings count
+
+export const getAllWebUsersCount = async (req, res) => {
+  try {
+    const webuserCount = await User.countDocuments({
+      role: "user",
+    });
+
+    res.status(200).json({
+      success: true,
+
+      data: webuserCount,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: true,
+      message: "Not found",
+    });
+  }
+};
+
+// Web users
+export const getAllAdminUsers = async (req, res) => {
+  try {
+    const user = await User.find({
+      role: "admin",
+    });
+    res.status(200).json({
+      success: true,
+
+      message: "Successfull",
+      data: user,
+    });
+  } catch (error) {
+    res.status(404).json({
+      success: true,
+      message: "Not found",
+    });
+  }
+};
+
+//confirmed bookings count
+
+export const getAllAdminCount = async (req, res) => {
+  try {
+    const adminCount = await User.countDocuments({
+      role: "admin",
+    });
+
+    res.status(200).json({
+      success: true,
+
+      data: adminCount,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: true,
+      message: "Not found",
+    });
+  }
+};

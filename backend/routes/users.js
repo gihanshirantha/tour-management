@@ -4,6 +4,10 @@ import {
   deleteUser,
   getSingleUser,
   getAllUser,
+  getAllWebUsersCount,
+  getAllAdminUsers,
+  getAllAdminCount,
+  getAllWebUsers
  
   
 } from "../Controllers/userController.js";
@@ -21,6 +25,18 @@ router.get("/:id",  getSingleUser);
 
 //get all  User
 router.get("/",  getAllUser);
+
+//get all web User
+router.get("/search/getAllusers",  getAllWebUsers);
+
+//get all web User count
+router.get("/search/getUserCount",  getAllWebUsersCount);
+
+//get all admin
+router.get("/search/getAlladmin",  getAllAdminUsers);
+
+//get all web User
+router.get("/search/getAllAdminCount",  getAllAdminCount);
 
 
 

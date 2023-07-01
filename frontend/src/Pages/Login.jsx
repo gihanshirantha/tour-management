@@ -72,6 +72,7 @@ const handleClick=async e=>{
                       <input type="email" 
                       placeholder='Email' 
                       required 
+                      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                       id='email' 
                       onChange={handleChange} />
                     </FormGroup>
@@ -80,6 +81,8 @@ const handleClick=async e=>{
                       <input 
                       type="password" placeholder='Password' 
                       required 
+                      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                       title="Password must contain at least 8 characters."
                       id='password' 
                       onChange={handleChange} />
                     </FormGroup>

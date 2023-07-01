@@ -96,6 +96,8 @@ const handleClick= async e=>{
                       <input 
                       type="password" placeholder='Password' 
                       required 
+                      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                       title="Password must contain at least 8 characters."
                       id='password' 
                       onChange={handleChange} />
                     </FormGroup>
@@ -106,6 +108,7 @@ const handleClick= async e=>{
                       type="tel" placeholder='Telephone Number' 
                       required 
                       id='telephone' 
+                      pattern="[0-9]{10}"
                       onChange={handleChange} />
                     </FormGroup>
                     <Button className='btn secondary__btn auth__btn' type='submit'>Register</Button>

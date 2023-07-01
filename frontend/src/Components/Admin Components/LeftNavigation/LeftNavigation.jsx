@@ -59,7 +59,7 @@ const LeftNavigation = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to={'#'}>
+                        <Link to={'/admin/webusers'}>
                         <div className="list_item d-flex mb-3">
                             <div className="sb_icon">
                             <i class="fa-solid fa-user"></i>
@@ -71,7 +71,7 @@ const LeftNavigation = () => {
                     </li>
                     
                     <li>
-                        <Link to={'#'}>
+                        <Link to={'/'}>
                         <div className="list_item d-flex sb_logout">
                             <div className="sb_icon">
                             <i class="fa-solid fa-gauge"></i>

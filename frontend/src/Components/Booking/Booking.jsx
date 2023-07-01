@@ -103,6 +103,7 @@ const Booking = ({tour,avgRating}) => {
                 <FormGroup className='mb-3'>
                     <input 
                     type="email" 
+                     pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                     placeholder='Email Address' 
                     id='userEmail'
                      required onChange={handleChange} />

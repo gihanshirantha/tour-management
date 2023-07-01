@@ -32,6 +32,9 @@ import RoundTours from '../Components/Admin Components/TourManagement/RoundTours
 import ViewTourDetails from '../Admin/ViewTourDetails'
 import UpdateTour from '../Admin/UpdateTour';
 import AddNewTour from '../Admin/AddNewTour';
+import Adminusers from '../Components/Admin Components/UserManagement/Adminusers';
+import Webusers from '../Components/Admin Components/UserManagement/Webusers';
+
 
 import Layout from '../Components/Layout/Layout'
 import AdminApp from '../Components/Layout/AdminApp'
@@ -83,6 +86,10 @@ function Routers() {
           <Route path='/admin/viewtour/:id' element={<ViewTourDetails/>}/>
           <Route path='/admin/updatetour/:id' element={<UpdateTour/>}/>
           <Route path='/admin/addnewtour' element={<AddNewTour/>}/>
+          <Route path='/admin/adminusers' element={<Adminusers/>}/>
+          <Route path='/admin/webusers' element={<Webusers/>}/>
+
+
 
 
 
