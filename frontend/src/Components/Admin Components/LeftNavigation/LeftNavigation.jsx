@@ -52,7 +52,7 @@ const LeftNavigation = () => {
                         <div className="list_item d-flex mb-3">
                             <div className="sb_icon">
                             <i class="fa-solid fa-car"></i>
-                            Vahicle
+                            Vehicle
                             </div>
                             
                         </div>

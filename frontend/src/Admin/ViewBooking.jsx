@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useRef} from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
@@ -6,7 +6,11 @@ import useFetch from "../hooks/useFetch";
 import { BASE_URL } from "../Utils/config";
 import "./Styles/veiwbooking.css";
 
+import html2canvas from 'html2canvas'
+import jsPDF from 'jspdf'
+
 const ViewBooking = () => {
+  const pdfRef=useRef()
   const { id } = useParams();
   const {
     data: booking,
@@ -39,8 +43,20 @@ const ViewBooking = () => {
 
   const options = { day: "numeric", month: "long", year: "numeric" };
 
+  const downloadPDF=()=>{
+    const input=pdfRef.current;
+    html2canvas(input).then((canvas)=>{
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('landscape','mm','a3',true);
+      pdf.addImage(imgData, 'JPEG', 0, 0);
+      pdf.save("bookinginfo.pdf");
+    })
+  }
+
   return (
+    
     <div className="booking_view">
+      <div ref={pdfRef}>
       <Row>
         <Col lg="4">
           <div className="bvtitle">
@@ -122,13 +138,18 @@ const ViewBooking = () => {
               <p>{status}</p>
             </div>
             <div className="back_btn">
-              <Link to={"/admin/allbooking"}>
-                <Button className="admin_bokking_btn">All Bookings</Button>
-              </Link>
+              
             </div>
           </div>
         </Col>
       </Row>
+     
+    </div>
+    <Link to={"/admin/allbooking"}>
+                <Button className="admin_bokking_btn">All Bookings</Button>
+              </Link>
+
+      <Button className="admin_bokking_btn" onClick={downloadPDF}>Download As Pdf</Button>
     </div>
   );
 };

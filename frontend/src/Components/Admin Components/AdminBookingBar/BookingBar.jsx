@@ -120,30 +120,35 @@ const BookingBar = ({ booking }) => {
           <div className="hoptions">
             <Button
               className="option_btns btn btn-success"
+              title="Confirm Booking"
               onClick={handleClickConfirm}
             >
               <i class="fa-solid fa-calendar-check"></i>
             </Button>
             <Button
+            title="Cancel Booking"
               className="option_btns btn btn-secondary"
               onClick={handleCancel}
             >
               <i class="fa-sharp fa-solid fa-ban"></i>
             </Button>
             <Button
+            title="Mark as Finished Booking"
               className="option_btns btn btn-warning"
               onClick={handleFinished}
             >
               <i class="fa-solid fa-circle-check"></i>
             </Button>
             <Button
+            title="Delete Booking"
               className="option_btns btn btn-danger"
               onClick={handleDelete}
             >
               <i class="fa-solid fa-trash"></i>
             </Button>
             <Link to={`/admin/viewbooking/${_id}`}>
-              <Button className="option_btns btn btn-primary">
+              <Button className="option_btns btn btn-primary"
+              title="View Details">
                 <i class="fa-solid fa-eye"></i>
               </Button>
             </Link>
