@@ -19,7 +19,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 const corsOption = {
-  origin: 'http://localhost:3005',
+  origin: 'https://tour-management-kappa.vercel.app/',
   allowedHeaders: ['Content-Type', 'Authorization'],
   methods: 'GET,POST,PUT,DELETE',
   credentials: true,
