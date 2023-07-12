@@ -81,7 +81,7 @@ const handleClick=async e=>{
                       <input 
                       type="password" placeholder='Password' 
                       required 
-                      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                     
                        title="Password must contain at least 8 characters."
                       id='password' 
                       onChange={handleChange} />
