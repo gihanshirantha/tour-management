@@ -1,1 +1,1 @@
-export const BASE_URL='https://deegayu-tours.onrender.com'
+export const BASE_URL='https://deegayu-tours.onrender.com/api/v1/'
