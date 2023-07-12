@@ -19,7 +19,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 const corsOption = {
-  origin: 'https://tour-management-kappa.vercel.app',
+  origin: '*',
   allowedHeaders: ['Content-Type', 'Authorization'],
   methods: 'GET,POST,PUT,DELETE',
   credentials: true,
@@ -51,7 +51,7 @@ app.use(cors(corsOption));
 app.use(cookieParser());
 
 app.use("/api/v1/auth", authRoute);
-app.use("/tours", tourRoute);
+app.use("/api/v1/tours", tourRoute);
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/review", reviewRoute);
 app.use("/api/v1/booking", bookingRoute);
