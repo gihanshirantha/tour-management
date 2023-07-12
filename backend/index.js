@@ -19,7 +19,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 const corsOption = {
-  origin: '*',
+  origin: 'http://localhost:3005',
   allowedHeaders: ['Content-Type', 'Authorization'],
   methods: 'GET,POST,PUT,DELETE',
   credentials: true,
